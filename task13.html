@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        13. Морський бій. Комп’ютер випадково розташовує одиночний корабель на
+        полі розміром N*M. Маючи К снарядів користувач намагається потопити
+        корабель.
+      </h1>
+      <a href="./index.html">Повернутись до задач</a>
+
+      <script>
+        //крок 0.визначаємо змінні
+        let countOfRows = parseInt(prompt("Введить кількість рядків", "10"));
+        let countOfColumns = parseInt(
+          prompt("Введить кількість колонок", "10")
+        );
+        let countOfShots = parseInt(
+          prompt("Введить кількість пострілів", "10")
+        );
+
+        let numberOfRows;
+        let numberOfColumns;
+        for (let i = 0; i < countOfShots; i++) {
+          numberOfRows = 1 + Math.floor(Math.random() * countOfRows);
+          numberOfColumns = 1 + Math.floor(Math.random() * countOfColumns);
+          let customerRows = parseInt(
+            prompt("Зробить постріл:Введить номер рядка")
+          );
+          let customerColumns = parseInt(
+            prompt("Зробить постріл:Введить номер колонки")
+          );
+          if (
+            customerRows === numberOfRows &&
+            customerColumns === numberOfColumns
+          ) {
+            alert(`Вітаю.Ви влучили!`);
+            break;
+          } else alert("Нажаль, ви не влучили.Спробуйте ще");
+        }
+      </script>
+    </div>
+  </body>
+</html>
