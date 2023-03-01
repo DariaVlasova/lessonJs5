@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Задача 15. Користувача поступово вводить показники температури протягом
+        року. Знайти середню температуру.
+      </h1>
+      <a href="./index.html">Повернутись до задач</a>
+      <script>
+        let countOfMonth = 12;
+        let averageTemperature;
+        let sumOfTemperature = 0;
+        for (countOfMonth = 1; countOfMonth <= 12; countOfMonth++) {
+          let customerData = parseInt(
+            prompt(
+              `Введить,будь ласка,показники температури за ${countOfMonth} місяць `
+            )
+          );
+          sumOfTemperature += customerData;
+          console.log(`${sumOfTemperature}`);
+          averageTemperature = Math.floor(sumOfTemperature / countOfMonth);
+          console.log(`${averageTemperature}`);
+        }
+        document.write(`Середня температура ${averageTemperature}`);
+      </script>
+    </div>
+  </body>
+</html>

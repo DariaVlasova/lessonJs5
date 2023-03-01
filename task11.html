@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Задача 11. Знайти суму 5 непарних чисел, що знаходяться між заданими
+        користувачем числами.
+      </h1>
+      <a href="./index.html">Повернутись до задач</a>
+      <script>
+        let minOfRange = Math.floor(
+          prompt("Введить,будь ласка,початкове значення діпазону чисел", "")
+        );
+        let maxOfRange = Math.floor(
+          prompt("Введить,будь ласка,кінцеве значення діпазону чисел", "")
+        );
+
+        let sumNumber = 0;
+        let countNumber = 0;
+        for (let i = minOfRange; i < maxOfRange; i++) {
+          if (i % 2 > 0 && countNumber < 5) {
+            sumNumber += i;
+            countNumber++;
+          }
+        }
+        document.write(`Сума всіх непарних чисел, що знаходяться між заданими
+        користувачем числами ${sumNumber}`);
+      </script>
+    </div>
+  </body>
+</html>
